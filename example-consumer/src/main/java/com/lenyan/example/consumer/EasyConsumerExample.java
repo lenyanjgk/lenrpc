@@ -10,8 +10,8 @@ import com.lenyan.example.common.service.UserService;
 public class EasyConsumerExample {
 
     public static void main(String[] args) {
+        UserService userService = new UserServiceProxy();
         // todo 需要获取 UserService 的实现类对象
-        UserService userService = null;
         User user = new User();
         user.setName("lenyan");
         // 调用
