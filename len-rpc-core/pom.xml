@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.lenyan</groupId>
-  <artifactId>example-consumer</artifactId>
+  <artifactId>len-rpc-core</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>example-consumer</name>
+  <name>len-rpc-easy</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -21,20 +21,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>com.lenyan</groupId>-->
-<!--      <artifactId>len-rpc-easy</artifactId>-->
-<!--      <version>1.0-SNAPSHOT</version>-->
-<!--    </dependency>-->
+    <!-- https://mvnrepository.com/artifact/io.vertx/vertx-core -->
     <dependency>
-      <groupId>com.lenyan</groupId>
-      <artifactId>len-rpc-core</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>com.lenyan</groupId>
-      <artifactId>example-common</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-core</artifactId>
+      <version>4.5.1</version>
     </dependency>
     <!-- https://doc.hutool.cn/ -->
     <dependency>
@@ -49,6 +40,17 @@
       <version>1.18.30</version>
       <scope>provided</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.3.12</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>RELEASE</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
-
 </project>

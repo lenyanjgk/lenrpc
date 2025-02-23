@@ -21,11 +21,16 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-      <dependency>
-        <groupId>com.lenyan</groupId>
-        <artifactId>len-rpc-easy</artifactId>
-        <version>1.0-SNAPSHOT</version>
-      </dependency>
+    <!--    <dependency>-->
+    <!--      <groupId>com.lenyan</groupId>-->
+    <!--      <artifactId>len-rpc-easy</artifactId>-->
+    <!--      <version>1.0-SNAPSHOT</version>-->
+    <!--    </dependency>-->
+    <dependency>
+      <groupId>com.lenyan</groupId>
+      <artifactId>len-rpc-core</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
       <dependency>
         <groupId>com.lenyan</groupId>
         <artifactId>example-common</artifactId>
