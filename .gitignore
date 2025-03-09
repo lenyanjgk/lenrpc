@@ -103,3 +103,13 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 !/.idea/
+/.idea/.gitignore
+/.idea/ApifoxUploaderProjectSetting.xml
+/.idea/checkstyle-idea.xml
+/.idea/compiler.xml
+/.idea/encodings.xml
+/.idea/jarRepositories.xml
+/.idea/lenrpc.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
