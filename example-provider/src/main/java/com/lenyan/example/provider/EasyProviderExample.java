@@ -1,6 +1,5 @@
 package com.lenyan.example.provider;
 
-
 import com.lenyan.example.common.service.UserService;
 import com.lenyan.lenrpc.RpcApplication;
 import com.lenyan.lenrpc.registry.LocalRegistry;
@@ -10,9 +9,7 @@ import com.lenyan.lenrpc.server.VertxHttpServer;
 /**
  * 简易服务提供者示例
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @learn <a href="https://codefather.cn">编程宝典</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ * @author <a href="https://github.com/lenyanjgk">程序员冷颜</a>
  */
 public class EasyProviderExample {
 

@@ -4,7 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.setting.dialect.Props;
 import lombok.extern.slf4j.Slf4j;
-
+import com.lenyan.lenrpc.constant.RpcConstant;
 import java.io.File;
 
 /**
@@ -14,11 +14,6 @@ import java.io.File;
  */
 @Slf4j
 public class ConfigUtils {
-
-    /**
-     * 支持的配置文件格式
-     */
-    private static final String[] SUPPORT_FILE_EXTENSIONS = { ".yml", ".yaml", ".properties" };
 
     /**
      * 加载配置对象
@@ -88,7 +83,7 @@ public class ConfigUtils {
      */
     private static Props tryLoadConfigFile(String configFilePrefix) {
         // 优先尝试从类路径加载（resources目录下）
-        for (String extension : SUPPORT_FILE_EXTENSIONS) {
+        for (String extension : RpcConstant.SUPPORT_FILE_EXTENSIONS) {
             String configFileName = configFilePrefix + extension;
             try {
                 // 使用Hutool工具类Props加载配置文件
@@ -102,7 +97,7 @@ public class ConfigUtils {
         }
 
         // 如果从类路径加载失败，尝试从文件系统加载（绝对路径或相对路径）
-        for (String extension : SUPPORT_FILE_EXTENSIONS) {
+        for (String extension : RpcConstant.SUPPORT_FILE_EXTENSIONS) {
             String configFileName = configFilePrefix + extension;
             File configFile = new File(configFileName);
             if (configFile.exists()) {
