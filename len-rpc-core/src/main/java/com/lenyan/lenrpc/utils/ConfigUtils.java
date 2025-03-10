@@ -116,4 +116,25 @@ public class ConfigUtils {
         // 所有尝试都失败，返回null表示没有找到配置文件
         return null;
     }
+
+    /**
+     * 支持监听配置文件的变更，并自动更新配置对象
+     * 使用 Hutool 工具类的 props.autoLoad() 实现配置文件变更的监听和自动加载
+     *
+     * @param props 要监听的配置对象
+     */
+    public static void autoLoad(Props props) {
+        if (props == null) {
+            log.warn("配置对象为空，无法启用自动加载功能");
+            return;
+        }
+
+        try {
+            // 启用配置文件自动加载
+            props.autoLoad(true);
+            log.info("已启用配置文件自动加载功能");
+        } catch (Exception e) {
+            log.error("启用配置文件自动加载功能失败", e);
+        }
+    }
 }

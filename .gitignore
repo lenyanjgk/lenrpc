@@ -113,3 +113,4 @@ fabric.properties
 /.idea/misc.xml
 /.idea/modules.xml
 /.idea/vcs.xml
+example-consumer/target/classes/application.yml
