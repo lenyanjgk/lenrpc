@@ -28,4 +28,23 @@ public class RpcConfig {
      */
     private Integer serverPort = 8080;
 
+    /**
+     * 服务描述
+     */
+    private String description;
+
+    /**
+     * 作者
+     */
+    private String author;
+
+    /**
+     * 公司
+     */
+    private String company;
+
+    /**
+     * 地址
+     */
+    private String address;
 }

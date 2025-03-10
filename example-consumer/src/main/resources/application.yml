@@ -1,5 +1,9 @@
 rpc:
-  name: lenrpc-consumer
-  version: 1.2
+  name: lenrpc-provider
+  version: 1.0
   serverHost: localhost
-  serverPort: 8081
+  serverPort: 8080
+  description: 这是一个RPC服务提供者
+  author: 程序员冷颜
+  company: 冷颜科技
+  address: 北京市朝阳区 

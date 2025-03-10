@@ -6,14 +6,21 @@ import cn.hutool.setting.dialect.Props;
 import lombok.extern.slf4j.Slf4j;
 import com.lenyan.lenrpc.constant.RpcConstant;
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 
 /**
  * 配置工具类
  * 支持多种格式配置文件(.yml/.yaml/.properties)的加载
  * 支持环境配置和配置文件变更自动更新
+ * 支持中文编码
  */
 @Slf4j
 public class ConfigUtils {
+
+    /**
+     * 默认字符编码
+     */
+    private static final String DEFAULT_CHARSET = StandardCharsets.UTF_8.name();
 
     /**
      * 加载配置对象
@@ -66,6 +73,9 @@ public class ConfigUtils {
                 return BeanUtil.toBean(new Props(), tClass);
             }
 
+            // 启用配置文件自动加载
+            autoLoad(props);
+
             // 将配置转换为目标类的实例并返回
             return BeanUtil.toBean(props, tClass);
         } catch (Exception e) {
@@ -86,8 +96,8 @@ public class ConfigUtils {
         for (String extension : RpcConstant.SUPPORT_FILE_EXTENSIONS) {
             String configFileName = configFilePrefix + extension;
             try {
-                // 使用Hutool工具类Props加载配置文件
-                Props props = new Props(configFileName);
+                // 使用Hutool工具类Props加载配置文件，指定UTF-8编码
+                Props props = new Props(configFileName, DEFAULT_CHARSET);
                 log.info("成功加载配置文件: {}", configFileName);
                 return props;
             } catch (Exception e) {
@@ -102,8 +112,8 @@ public class ConfigUtils {
             File configFile = new File(configFileName);
             if (configFile.exists()) {
                 try {
-                    // 从文件系统加载配置
-                    Props props = new Props(configFile);
+                    // 从文件系统加载配置，指定UTF-8编码
+                    Props props = new Props(configFile, DEFAULT_CHARSET);
                     log.info("成功加载文件系统配置文件: {}", configFile.getAbsolutePath());
                     return props;
                 } catch (Exception e) {
